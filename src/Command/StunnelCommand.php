@@ -11,6 +11,9 @@ use Symfony\Component\Process\Process;
 
 class StunnelCommand extends ContainerAwareCommand
 {
+    /**
+     * {@inheritdoc}
+     */
     protected function configure()
     {
         $this
@@ -20,6 +23,9 @@ class StunnelCommand extends ContainerAwareCommand
         ;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         // Get required services
