@@ -97,7 +97,7 @@ Simply use the Symfony console component and execute the command to start stunne
 are included, in Linux you should make sure that stunnel is installed (for Ubuntu `sudo apt-get install stunnel4`).
 
 ```console
-bin/console stunnel
+php bin/console stunnel
 ``` 
 
 In Windows an icon in the system tray will be visible, in Linux the stunnel process will be started in the background.
