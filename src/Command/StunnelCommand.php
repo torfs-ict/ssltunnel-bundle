@@ -52,7 +52,7 @@ class StunnelCommand extends ContainerAwareCommand
                     }
                 }
             );
-            if ($status !== 0) return;
+            if ($status->getExitCode() !== 0) return;
             // Get DNS aliases from Nanobox
             $process = new Process('nanobox dns ls local', $container->getParameter('kernel.project_dir'));
             $status = $processHelper->run($output, $process, 'Unable to retrieve Nanobox DNS aliases.',
@@ -68,7 +68,7 @@ class StunnelCommand extends ContainerAwareCommand
                     $config['accept_host'] = $alias;
                 }
             );
-            if ($status !== 0) return;
+            if ($status->getExitCode() !== 0) return;
         } elseif (empty($config['forward_host']) || empty($config['accept_host'])) {
             throw new LogicException('The accept and forward hosts must be set if not extracted from Nanobox.');
         }
