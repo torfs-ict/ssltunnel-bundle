@@ -1,0 +1,14 @@
+{
+  "name": "torfs-ict/stunnel-bundle",
+  "description": "Add HTTPS connectivity to local environments with stunnel",
+  "type": "symfony-bundle",
+  "authors": [{
+    "name": "Kristof Torfs",
+    "email": "kristof@torfs.org"
+  }],
+  "keywords": ["https", "ssl", "letsencrypt", "symfony", "bundle"],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1.0"
+  }
+}
