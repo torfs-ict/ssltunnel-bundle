@@ -1,0 +1,8 @@
+[{{ accept_host }}]
+accept  = {{ accept_host }}:443
+connect = {{ forward_host }}:{{ forward_port }}
+cert = {{ fullchain }}
+key = {{ privkey }}
+ciphers = ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES128-SHA:DES-CBC3-SHA
+options = CIPHER_SERVER_PREFERENCE
+renegotiation=no
